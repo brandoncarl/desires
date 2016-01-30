@@ -1,0 +1,14 @@
+{
+  "name": "desires",
+  "version": "0.1.0",
+  "description": "require(), but with dynamic npm installation",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brandon Carl (http://www.brandoncarl.com/)",
+  "license": "MIT"
+}
