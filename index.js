@@ -33,7 +33,7 @@ module.exports = function(name, config) {
 
   // Attempt to load, install if absent
   try {
-    library = require(location)
+    library = require(location);
   } catch (err) {
     npm.installSync(name, options);
     library = require(location);
