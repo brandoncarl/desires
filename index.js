@@ -21,6 +21,9 @@ module.exports = function(name, options) {
   // Return cache if available
   if (cache[name]) return cache[name];
 
+  // Default to saving
+  if ("undefined" === typeof options.save) options.save = true;
+
   // Allow for alternative directories
   location = name;
   if (options.dir) {
