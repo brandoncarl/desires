@@ -27,8 +27,8 @@ module.exports = function(name, config) {
   // Allow for alternative directories
   location = name;
   if (config.dir) {
-    options.cwd = config.dir.replace("\/node_modules\/?$", "");
-    location = path.join(options.cwd, "node_modules", location);
+    options.cwd = path.join(config.dir.replace("\/node_modules\/?$", ""), "node_modules");
+    location = path.join(options.cwd, location);
   }
 
   // Attempt to load, install if absent
