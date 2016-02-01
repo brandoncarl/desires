@@ -4,7 +4,7 @@
   "description": "require(), but with dynamic npm installation",
   "main": "index.js",
   "dependencies": {
-    "npmwrap": "^0.1.2"
+    "npmwrap": "^0.1.3"
   },
   "devDependencies": {},
   "scripts": {
