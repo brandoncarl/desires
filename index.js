@@ -12,7 +12,7 @@ var npm = require("npmwrap"),
     cache = {};
 
 
-module.exports = function(name, options) {
+module.exports = function(name, config) {
 
   var library,
       location,
@@ -22,12 +22,12 @@ module.exports = function(name, options) {
   if (cache[name]) return cache[name];
 
   // Default to saving
-  if ("undefined" === typeof options.save) options.save = true;
+  if ("undefined" === typeof config.save) options.save = true;
 
   // Allow for alternative directories
   location = name;
-  if (options.dir) {
-    options.cwd = options.cwd.replace("\/node_modules\/?$", "");
+  if (config.dir) {
+    options.cwd = config.dir.replace("\/node_modules\/?$", "");
     location = path.join(options.cwd, "node_modules", location);
   }
 
