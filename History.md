@@ -1,4 +1,9 @@
 
+v0.1.3
+----------
+* package.json: upgrades npmwrap to v0.1.4
+
+
 v0.1.2
 ----------
 * Fixes missing node_modules location bug
