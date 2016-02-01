@@ -27,15 +27,15 @@ module.exports = function(name, options) {
   // Allow for alternative directories
   location = name;
   if (options.dir) {
-    options.dir = options.dir.replace("\/node_modules\/?$", "");
-    location = path.join(options.dir, "node_modules", location);
+    options.cwd = options.cwd.replace("\/node_modules\/?$", "");
+    location = path.join(options.cwd, "node_modules", location);
   }
 
   // Attempt to load, install if absent
   try {
     library = require(location)
   } catch (err) {
-    npm.installSync(name, { save : true, cwd : options.dir });
+    npm.installSync(name, options);
     library = require(location);
   }
 
