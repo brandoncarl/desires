@@ -1,8 +1,5 @@
 {
   "name": "example",
   "dependencies": {},
-  "devDependencies": {
-    "handlebars": "^4.0.5",
-    "lodash.rest": "^4.0.0"
-  }
+  "devDependencies": {}
 }
