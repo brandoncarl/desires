@@ -1,4 +1,9 @@
 
+v0.2.1
+----------
+* Linting
+
+
 v0.2.0
 ----------
 * package.json: upgrades npmwrap to v0.2.0
