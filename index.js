@@ -16,19 +16,17 @@ module.exports = function(name, config) {
 
   var library,
       location,
-      options = options || {};
+      options = Object.assign({ save : true }, options);
 
   // Return cache if available
   if (cache[name]) return cache[name];
 
-  // Default to saving
-  if ("undefined" === typeof config.save) options.save = true;
-
   // Allow for alternative directories
   location = name;
-  if (config.dir) {
-    options.cwd = path.join(config.dir.replace("\/node_modules\/?$", ""), "node_modules");
+  if (options.dir) {
+    options.cwd = path.join(options.dir.replace("\/node_modules\/?$", ""), "node_modules");
     location = path.join(options.cwd, location);
+    delete options.dir;
   }
 
   // Attempt to load, install if absent
