@@ -41,6 +41,9 @@ module.exports = function(name, options) {
   // Return cache if available
   if (cache[name]) return cache[name];
 
+  // If saveDev, unset save
+  if (options.saveDev) delete options.save;
+
   // Allow for alternative directories
   location = name;
   if (options.dir) {
