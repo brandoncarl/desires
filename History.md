@@ -1,4 +1,11 @@
 
+v0.1.4
+----------
+* Cleans up options/configuration
+* Better commenting, readme and examples
+* package.json: upgrades npmwrap to v0.1.5
+
+
 v0.1.3
 ----------
 * package.json: upgrades npmwrap to v0.1.4
