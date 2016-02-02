@@ -1,4 +1,9 @@
 
+v0.2.0
+----------
+* package.json: upgrades npmwrap to v0.2.0
+
+
 v0.1.4
 ----------
 * Cleans up options/configuration
