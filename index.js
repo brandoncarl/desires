@@ -37,7 +37,9 @@ module.exports = function(name, options) {
   var library,
       location;
 
-  options = Object.assign({ save : true }, options);
+  // Default to saving
+  options = options || {};
+  if ("undefined" === typeof options.save) options.save = true;
 
   // Return cache if available
   if (cache[name]) return cache[name];
