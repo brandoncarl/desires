@@ -1,6 +1,6 @@
 {
   "name": "desires",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "require(), but with dynamic npm installation",
   "main": "index.js",
   "dependencies": {
